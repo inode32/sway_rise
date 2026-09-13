@@ -27,8 +27,11 @@ local highlights = {
     LineNr       = { fg = "#555555" },
     CursorLineNr = { fg = "#aaaaaa", bold = true },
 
-    Comment      = { fg = "#555555", italic = true },
+    Comment      = { fg = "#7799aa", italic = true },
+    Todo         = { fg = "#ffffff", bg = "#333333", bold = true },
+
     String       = { fg = "#558855" },
+    SpecialChar  = { fg = "#aaaa55", bold = true },
     Number       = { fg = "#55aaaa" },
     Boolean      = { fg = "#55aaaa", bold = true },
 
@@ -36,8 +39,14 @@ local highlights = {
     Function     = { fg = "#5555aa", bold = true },
     Statement    = { fg = "#aa55aa", bold = true },
     Keyword      = { fg = "#aa55aa", bold = true },
+    Conditional  = { fg = "#aa55aa", bold = true },
+    Repeat       = { fg = "#aa55aa", bold = true },
+    Exception    = { fg = "#aa55aa", bold = true },
+    Include      = { fg = "#aa55aa", bold = true },
+    
     Type         = { fg = "#55aaaa" },
     Constant     = { fg = "#55aaaa" },
+    Special      = { fg = "#55aaaa", italic = true },
     Operator     = { fg = "#cccccc" },
     PreProc      = { fg = "#5555aa" },
 
