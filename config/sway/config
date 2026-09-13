@@ -18,8 +18,8 @@ exec wl-paste --type text --watch clipman store --no-persist
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 #assign [app_id=""] workspace
 
-gaps inner 3
-gaps outer 3
+gaps inner 5
+gaps outer 5
 smart_gaps off
 
 default_border pixel 0
