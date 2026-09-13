@@ -7,11 +7,12 @@ set $right l
 
 set $term foot
 set $menu wmenu-run \
-    -f "monospace 11" \
+    -f "monospace 10" \
     -N "000000" -n "e0e0e0" \
     -M "000000" -m "ffffff" \
     -S "e0e0e0" -s "000000"
 
+exec mako
 exec_always "pkill kanshi; exec kanshi"
 exec wl-paste --type text --watch clipman store --no-persist
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
@@ -164,7 +165,7 @@ bar {
     tray_output none
     status_command ~/.config/sway/bar.sh
     
-    font monospace 11
+    font monospace 10
     
     colors {
         background #000000
