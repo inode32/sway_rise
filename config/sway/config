@@ -12,7 +12,7 @@ set $menu wmenu-run \
     -M "000000" -m "ffffff" \
     -S "e0e0e0" -s "000000"
 
-exec kanshi
+exec_always "pkill kanshi; exec kanshi"
 exec wl-paste --type text --watch clipman store --no-persist
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
