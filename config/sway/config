@@ -17,9 +17,8 @@ exec_always "pkill kanshi; exec kanshi"
 exec wl-paste --type text --watch clipman store --no-persist
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-assign [app_id="spotify"] workspace 3
-assign [app_id="com.follow.clashx"] workspace 4
-
+assign [app_id="firefox"] workspace 1
+assign [app_id=""] workspace 2
 
 gaps inner 5
 gaps outer 5
@@ -30,13 +29,12 @@ default_floating_border pixel 0
 
 for_window [tiling] border pixel 0
 for_window [floating] border none
-
 smart_borders on
 
-output * bg ~/Pictures/Wallpapers/wallp1.jpg fill
+output DP-4 bg ~/Pictures/Wallpapers/wallp1.jpg fill
+output DP-3 bg ~/Pictures/Wallpapers/wallp2.jpg fill
 
 font pango:monospace 10
-
 seat seat0 xcursor_theme "Bibata-Modern-Classic"
 exec_always gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Classic"
 
@@ -100,7 +98,6 @@ bindsym --to-code $mod+q kill
 floating_modifier $mod normal
 bindsym --to-code $mod+r reload
 bindsym --to-code $mod+Ctrl+e exec swaynag -t warning -m '' -B 'Yes, exit sway' 'swaymsg exit'
-
 
 bindsym --to-code $mod+$left focus left
 bindsym --to-code $mod+$down focus down
