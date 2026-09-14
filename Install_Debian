@@ -9,7 +9,7 @@ pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux \
 firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap tcpdump \
 libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep \
 fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme \ 
-zathura zathura-pdf-mupdf
+zathura zathura-pdf-mupdf ffmpeg chafa
 
 sudo nvim /etc/apt/sources.list
 deb http://deb.debian.org/debian/ stable main non-free non-free-firmware contrib
@@ -37,6 +37,11 @@ nvim ~/.config/kanshi/config
 
 sudo nvim /etc/tlp.conf
 sudo tlp start
+
+mkdir -p ~/.config/lf
+touch ~/.config/lf/lfrc
+nvim ~/.config/lf/previewer.sh
+chmod +x ~/.config/lf/previewer.sh
 
 mkdir ~/.themes
 mkdir ~/.icons
