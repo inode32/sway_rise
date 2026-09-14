@@ -1,0 +1,17 @@
+[opener]
+play = [
+    { run = 'mpv "$@"', orphan = true, desc = "mpv" }
+]
+image = [
+    { run = 'imv "$@"', orphan = true, desc = "imv" }
+]
+pdf = [
+    { run = 'zathura "$@"', orphan = true, desc = "zathura" }
+]
+
+[open]
+rules = [
+    { mime = "video/*", use = [ "play", "reveal" ] },
+    { mime = "image/*", use = [ "image", "reveal" ] },
+    { mime = "application/pdf", use = [ "pdf", "reveal" ] }
+]
