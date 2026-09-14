@@ -71,8 +71,8 @@ workspace 5 output DP-3
 
 bindsym --to-code $mod+Return exec foot
 bindsym --to-code $mod+d exec $menu
-bindsym --to-code $mod+f exec firefox
-bindsym --to-code $mod+c exec chromium
+bindsym --to-code $mod+Shift+f exec firefox
+bindsym --to-code $mod+Shift+c exec chromium
 
 bindsym --to-code $mod+Ctrl+r exec systemctl reboot
 bindsym --to-code $mod+Ctrl+p exec systemctl poweroff
