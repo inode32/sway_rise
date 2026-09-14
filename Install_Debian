@@ -28,30 +28,9 @@ sudo sensors-detect
 fish_config
 echo 'set -g fish_greeting ""' > ~/.config/fish/config.fish
 
-mkdir -p ~/.config/nvim
-nvim ~/.config/nvim/init.lua
-
-mkdir ~/.config/kanshi
-nvim ~/.config/kanshi/config
-
 sudo nvim /etc/tlp.conf
 sudo tlp start
 
-mkdir -p ~/.config/lf
-touch ~/.config/lf/lfrc
-nvim ~/.config/lf/previewer.sh
-chmod +x ~/.config/lf/previewer.sh
-
-mkdir ~/.themes
-mkdir ~/.icons
-
-mkdir -p ~/.config/sway
-mkdir -p ~/.config/foot
-nvim ~/.config/sway/bar.sh
-chmod +x ~/.config/sway/bar.sh
-
-cp /etc/sway/config ~/.config/sway/config
-cp /etc/xdg/foot/foot.ini ~/.config/foot/foot.ini
-
-mkdir -p ~/Pictures/Wallpapers
-mkdir -p ~/Pictures/Screenshots
+mkdir -p ~/.config/{nvim,kanshi,lf,sway,foot} ~/.themes ~/.icons ~/Pictures/{Wallpapers,Screenshots}
+touch ~/.config/nvim/init.lua ~/.config/kanshi/config ~/.config/lf/{lfrc,previewer.sh} ~/.config/sway/{bar.sh,config} ~/.config/foot/foot.ini
+chmod +x ~/.config/lf/previewer.sh ~/.config/sway/bar.sh
