@@ -3,7 +3,7 @@ nano /etc/sudoers
 sudo usermod -L root
 
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
-fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wl-clipboard clipman wmenu lf \
+fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wmenu lf \
 mako-notifier brightnessctl pipewire pipewire-pulse wireplumber pipewire-alsa \
 pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux \
 firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap ffmpeg chafa \
