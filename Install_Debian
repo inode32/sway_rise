@@ -3,12 +3,13 @@ nano /etc/sudoers
 sudo usermod -L root
 
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
-fish git firefox-esr sway swaylock foot slurp grim imv wl-clipboard clipman wmenu \
+fish git firefox-esr sway swaylock foot slurp grim imv mpv wl-clipboard clipman wmenu \
 mako-notifier brightnessctl pipewire pipewire-pulse wireplumber pipewire-alsa \
 pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux \
 firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap tcpdump \
 libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep \
 fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme \ 
+ffmpegthumbnailer fzf jq poppler-utils zathura zathura-pdf-poppler
 
 sudo nvim /etc/apt/sources.list
 deb http://deb.debian.org/debian/ stable main non-free non-free-firmware contrib
@@ -25,6 +26,11 @@ sudo ufw status verbose
 systemctl --user --now enable pipewire.socket pipewire-pulse.socket wireplumber.service
 sudo sensors-detect
 
+wget https://github.com/sxyazi/yazi/releases/latest/download/yazi-x86_64-unknown-linux-musl.zip
+unzip yazi-x86_64-unknown-linux-musl.zip
+sudo mv yazi-x86_64-unknown-linux-musl/yazi /usr/local/bin/
+sudo mv yazi-x86_64-unknown-linux-musl/ya /usr/local/bin/
+rm -rf yazi-x86_64-unknown-linux-musl*
 
 fish_config
 echo 'set -g fish_greeting ""' > ~/.config/fish/config.fish
