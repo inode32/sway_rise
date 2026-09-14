@@ -26,7 +26,11 @@ systemctl --user --now enable pipewire.socket pipewire-pulse.socket wireplumber.
 sudo sensors-detect
 
 fish_config
-echo 'set -g fish_greeting ""' > ~/.config/fish/config.fish
+echo 'set -g fish_greeting ""
+
+function happ
+    env LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libwayland-client.so.0 /usr/bin/happ $argv
+end' > ~/.config/fish/config.fish
 
 sudo nvim /etc/tlp.conf
 sudo tlp start
