@@ -3,7 +3,7 @@ set sixel true
 set drawbox true
 set ratios 1:2:3
 set info size:time
-set hidden true
+set hidden false
 set ignorecase true
 set cursoractive true
 set scrolloff 5
