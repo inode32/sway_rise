@@ -14,7 +14,8 @@ set $menu wmenu-run \
 
 exec mako
 exec_always "pkill kanshi; exec kanshi"
-exec wl-paste --type text --watch clipman store
+exec ~/.cargo/bin/wl-clip-persist --clipboard regular
+exec wl-paste --type text --watch clipman store --max-items=50
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 #assign [app_id=""] workspace
 
