@@ -14,8 +14,7 @@ set $menu wmenu-run \
 
 exec mako
 exec_always "pkill kanshi; exec kanshi"
-exec wl-paste --watch clipman store --no-persist
-exec wl-paste --primary --watch clipman store -P --histpath="$HOME/.local/share/clipman-primary.json"
+exec wl-paste --type text --watch clipman store
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 #assign [app_id=""] workspace
 
@@ -97,6 +96,7 @@ bindsym --to-code $mod+q kill
 floating_modifier $mod normal
 bindsym --to-code $mod+r reload
 bindsym --to-code $mod+Ctrl+e exec swaynag -t warning -m '' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym --to-code $mod+c exec "clipman pick --tool=STDOUT | wmenu -f 'monospace 10' -N '000000' -n 'e0e0e0' -M '000000' -m 'ffffff' -S 'e0e0e0' -s '000000' | wl-copy"
 
 bindsym --to-code $mod+$left focus left
 bindsym --to-code $mod+$down focus down
