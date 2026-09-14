@@ -7,7 +7,7 @@ fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wl-clipboard
 mako-notifier brightnessctl pipewire pipewire-pulse wireplumber pipewire-alsa \
 pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux \
 firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap tcpdump ffmpeg chafa \
-libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep zathura zathura-pdf-mupdf \
+libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep zathura zathura-pdf-poppler \
 fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme
 
 sudo nvim /etc/apt/sources.list
