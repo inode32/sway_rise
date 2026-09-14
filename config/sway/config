@@ -138,9 +138,8 @@ bindsym --to-code $mod+f fullscreen
 bindsym --to-code $mod+s floating toggle
 bindsym $mod+space focus mode_toggle
 	
-#bindsym --to-code $mod+a focus parent
-#bindsym --to-code $mod+Shift+minus move scratchpad
-#bindsym $mod+minus scratchpad show
+bindsym --to-code $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
 #bindsym --to-code $mod+Shift+w mode "resize"
 mode "resize" {
 	bindsym Left resize shrink width 10px
