@@ -6,10 +6,9 @@ sudo apt update && sudo apt upgrade -y && sudo apt install -y \
 fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wl-clipboard clipman wmenu lf \
 mako-notifier brightnessctl pipewire pipewire-pulse wireplumber pipewire-alsa \
 pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux \
-firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap tcpdump \
-libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep \
-fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme \ 
-zathura zathura-pdf-mupdf ffmpeg chafa
+firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap tcpdump ffmpeg chafa \
+libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep zathura zathura-pdf-mupdf \
+fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme
 
 sudo nvim /etc/apt/sources.list
 deb http://deb.debian.org/debian/ stable main non-free non-free-firmware contrib
