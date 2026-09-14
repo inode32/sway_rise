@@ -29,8 +29,8 @@ for_window [tiling] border pixel 0
 for_window [floating] border none
 smart_borders on
 
-output DP-4 bg ~/Pictures/Wallpapers/wallp1_1.jpg fill
-output DP-3 bg ~/Pictures/Wallpapers/wallp1_2.jpg fill
+output DP-4 bg ~/Pictures/Wallpapers/wallp5_1.jpg fill
+output DP-3 bg ~/Pictures/Wallpapers/wallp5_2.jpg fill
 
 font pango:monospace 10
 seat seat0 xcursor_theme "Bibata-Modern-Classic"
