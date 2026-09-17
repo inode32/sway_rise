@@ -2,11 +2,11 @@ usermod -aG sudo $USER
 nano /etc/sudoers
 sudo usermod -L root
 
-sudo bash -c 'cat <<EOF > /etc/apt/sources.list
-deb http://deb.debian.org/debian/ stable main non-free non-free-firmware contrib
-deb http://security.debian.org/debian-security stable-security main non-free non-free-firmware contrib
-deb http://deb.debian.org/debian/ stable-updates main non-free non-free-firmware contrib
-EOF'
+sudo apt update && \
+sudo apt install -y netselect-apt && \
+sudo netselect-apt stable && \
+sudo sed -i 's/main contrib/main contrib non-free non-free-firmware/g' sources.list && \
+sudo mv sources.list /etc/apt/sources.list
 
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
 fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wmenu lf \
@@ -16,7 +16,7 @@ firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap ffmpeg chafa 
 libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep zathura zathura-pdf-poppler \
 fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme
 
-systemctl enable --now ufw
+sudo systemctl enable --now ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
