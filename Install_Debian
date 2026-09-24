@@ -2,11 +2,14 @@ usermod -aG sudo $USER
 nano /etc/sudoers
 sudo usermod -L root
 
-sudo apt update && \
-sudo apt install -y netselect-apt && \
-sudo netselect-apt stable && \
-sudo sed -i 's/main contrib/main contrib non-free non-free-firmware/g' sources.list && \
-sudo mv sources.list /etc/apt/sources.list
+sudo cat << 'EOF' | sudo tee /etc/apt/sources.list
+deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+deb http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware
+EOF
+
+echo 'APT::Acquire::Max-Parallel-Downloads "16";' | sudo tee /etc/apt/apt.conf.d/99parallel-downloads
+echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
 
 sudo apt update && sudo apt upgrade -y && sudo apt install -y \
 fish git firefox-esr chromium sway swaylock foot slurp grim imv mpv wmenu lf \
