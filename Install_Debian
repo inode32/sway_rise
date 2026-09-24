@@ -25,8 +25,8 @@ sudo ufw status verbose
 systemctl --user --now enable pipewire.socket pipewire-pulse.socket wireplumber.service
 sudo sensors-detect --auto
 
-mkdir -p ~/.config/{fish,nvim,kanshi,lf,sway,foot} ~/.themes ~/.icons ~/Pictures/{Wallpapers,Screenshots}
-touch ~/.config/nvim/init.lua ~/.config/kanshi/config ~/.config/lf/{lfrc,previewer.sh} ~/.config/sway/{bar.sh,config} ~/.config/foot/foot.ini
+mkdir -p ~/.config/{fish,nvim,kanshi,lf,sway,foot,zathura} ~/.themes ~/.icons ~/Pictures/{Wallpapers,Screenshots}
+touch ~/.config/nvim/init.lua ~/.config/kanshi/config ~/.config/lf/{lfrc,previewer.sh} ~/.config/sway/{bar.sh,config} ~/.config/foot/foot.ini ~/.config/zathura/zathurarc
 chmod +x ~/.config/lf/previewer.sh ~/.config/sway/bar.sh
 
 fish_config
