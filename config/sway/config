@@ -129,30 +129,15 @@ bindsym --locked XF86AudioLowerVolume exec pamixer -d 10
 bindsym --locked XF86AudioRaiseVolume exec pamixer -i 10
 bindsym --locked XF86AudioMicMute exec pamixer --default-source -t
 
-bindsym $mod+b splith
-bindsym $mod+v splitv
-	
-#bindsym $mod+s layout stacking
-#bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym --to-code $mod+b splith
+bindsym --to-code $mod+v splitv
 
 bindsym --to-code $mod+f fullscreen
 bindsym --to-code $mod+s floating toggle
-bindsym $mod+space focus mode_toggle
+bindsym --to-code $mod+space focus mode_toggle
 	
-bindsym --to-code $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-#bindsym --to-code $mod+Shift+w mode "resize"
-mode "resize" {
-	bindsym Left resize shrink width 10px
-	bindsym Down resize grow height 10px
-	bindsym Up resize shrink height 10px
-	bindsym Right resize grow width 10px
-
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	}
-
+bindsym --to-code $mod+minus move scratchpad
+bindsym --to-code $mod+Shift+minus scratchpad show
 
 bar {
     position top
