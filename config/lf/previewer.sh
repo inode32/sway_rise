@@ -1,4 +1,5 @@
 #!/bin/sh
+
 file="$1"
 w="$2"
 h="$3"
@@ -11,7 +12,7 @@ case "$mime" in
         ;;
     video/*)
         thumb="/tmp/lf_vid_preview.png"
-        ffmpeg -ss 00:00:02 -i "$file" -vframes 1 -f image2 "$thumb" >/dev/null 2>&1
+        ffmpeg -y -ss 00:00:02 -i "$file" -vframes 1 -f image2 "$thumb" >/dev/null 2>&1
         if [ -f "$thumb" ]; then
             chafa -f sixel -s "${w}x${h}" "$thumb"
         fi
@@ -25,6 +26,12 @@ case "$mime" in
         fi
         ;;
     *)
-        cat "$file" 2>/dev/null
+        if command -v batcat > /dev/null 2>&1; then
+            batcat --color=always --style=plain --wrap=character "$file"
+        elif command -v bat > /dev/null 2>&1; then
+            bat --color=always --style=plain --wrap=character "$file"
+        else
+            cat "$file" 2>/dev/null
+        fi
         ;;
 esac
