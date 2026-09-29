@@ -15,7 +15,10 @@ set $menu wmenu-run \
 exec mako
 exec_always "pkill kanshi; exec kanshi"
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-#assign [app_id=""] workspace
+
+assign [app_id="chromium"] workspace 1
+assign [app_id="firefox"] workspace 2
+assign [app_id="zathura"] workspace 5
 
 gaps inner 5
 gaps outer 0
