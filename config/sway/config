@@ -16,9 +16,9 @@ exec mako
 exec_always "pkill kanshi; exec kanshi"
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-assign [app_id="chromium"] workspace 1
-assign [app_id="firefox"] workspace 2
 assign [app_id="zathura"] workspace 5
+assign [app_id="firefox"] workspace 1
+assign [app_id="chromium"] workspace 2
 
 gaps inner 5
 gaps outer 0
@@ -53,7 +53,6 @@ client.focused          #cccccc #000000 #cccccc #cccccc   #cccccc
 client.focused_inactive #1a1a1a #000000 #666666 #1a1a1a   #1a1a1a
 client.unfocused        #1a1a1a #000000 #666666 #1a1a1a   #1a1a1a
 client.urgent           #8b0000 #000000 #ffffff #8b0000   #8b0000
-
 
 input * {
 	xkb_layout us,ru
