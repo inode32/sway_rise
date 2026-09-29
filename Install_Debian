@@ -1,5 +1,4 @@
 usermod -aG sudo $USER
-nano /etc/sudoers
 sudo usermod -L root
 
 sudo cat << 'EOF' | sudo tee /etc/apt/sources.list
