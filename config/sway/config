@@ -73,13 +73,11 @@ workspace 3 output DP-4
 workspace 4 output DP-4
 workspace 5 output DP-3
 
-bindsym --to-code $mod+Return exec foot
 bindsym --to-code $mod+d exec $menu
-bindsym --to-code $mod+Shift+f exec firefox
-bindsym --to-code $mod+Shift+c exec chromium
+bindsym --to-code $mod+Return exec foot
 
-bindsym --to-code $mod+Ctrl+r exec systemctl reboot
-bindsym --to-code $mod+Ctrl+p exec systemctl poweroff
+bindsym --to-code $mod+Shift+r exec systemctl reboot
+bindsym --to-code $mod+Shift+p exec systemctl poweroff
 bindsym --to-code $mod+Escape exec swaylock \
     --color 000000 \
     --ring-color 333333 \
@@ -97,10 +95,10 @@ bindsym --to-code $mod+Escape exec swaylock \
 bindsym --to-code $mod+Shift+x exec grim ~/Pictures/Screenshots/Screen-$(date +%s).png
 bindsym --to-code $mod+Shift+z exec grim -g "$(slurp)" ~/Pictures/Screenshots/Screen-$(date +%s).png
 
-bindsym --to-code $mod+q kill
 floating_modifier $mod normal
+bindsym --to-code $mod+q kill
 bindsym --to-code $mod+r reload
-bindsym --to-code $mod+Ctrl+e exec swaynag -t warning -m '' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym --to-code $mod+Shift+e exec swaynag -t warning -m '' -B 'Yes, exit sway' 'swaymsg exit'
 
 bindsym --to-code $mod+$left focus left
 bindsym --to-code $mod+$down focus down
