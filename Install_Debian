@@ -24,17 +24,16 @@ sudo ufw default allow outgoing
 sudo ufw enable
 sudo ufw status verbose
 
-systemctl --user --now enable pipewire.socket pipewire-pulse.socket wireplumber.service
-sudo sensors-detect --auto
-
-mkdir -p ~/.config/{fish,nvim,kanshi,lf,sway,foot,zathura,fastfetch} ~/.themes ~/.icons ~/Pictures/{Wallpapers,Screenshots}
-touch ~/.config/nvim/init.lua ~/.config/kanshi/config ~/.config/lf/{lfrc,previewer.sh} ~/.config/sway/{bar.sh,config} ~/.config/foot/foot.ini ~/.config/zathura/zathurarc ~/.config/fastfetch/config.jsonc
+mkdir -p ~/.config/{fish,nvim,kanshi,lf,sway,foot,zathura,fastfetch,pipewire/pipewire.conf.d} ~/.themes ~/.icons ~/Pictures/{Wallpapers,Screenshots}
+touch ~/.config/nvim/init.lua ~/.config/kanshi/config ~/.config/lf/{lfrc,previewer.sh} ~/.config/sway/{bar.sh,config} ~/.config/foot/foot.ini ~/.config/zathura/zathurarc ~/.config/fastfetch/config.jsonc ~/.config/pipewire/pipewire.conf.d/clock.conf
 chmod +x ~/.config/lf/previewer.sh ~/.config/sway/bar.sh
 
 fish_config
 echo 'set -g fish_greeting ""
 
 sudo tlp start
+sudo sensors-detect --auto
+systemctl --user --now enable pipewire.socket pipewire-pulse.socket wireplumber.service
 
 sudo vi /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash consoleblank=0 i915.enable_psr=0 i915.enable_dc=0"
