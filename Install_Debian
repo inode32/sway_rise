@@ -16,7 +16,7 @@ mako-notifier brightnessctl pipewire pipewire-pulse wireplumber pipewire-alsa ba
 pamixer pavucontrol ufw intel-microcode linux-headers-amd64 firmware-linux poppler-utils \
 firmware-misc-nonfree kanshi unzip zip lm-sensors tlp tlp-rdw nmap ffmpeg chaf fwupd xwayland \
 libglib2.0-bin xdg-desktop-portal-wlr curl neovim build-essential ripgrep zathura zathura-pdf-poppler \
-fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme
+fd-find python3-pip python3-venv htop fastfetch qtwayland5 qt6-wayland adwaita-qt qt6-gtk-platformtheme qbittorrent
 
 sudo systemctl enable --now ufw
 sudo ufw default deny incoming
